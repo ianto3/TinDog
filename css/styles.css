@@ -10,10 +10,16 @@ h1 {
     color: white;
 }
 
+h3 {
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 1.5rem;
+}
+
 .container-fluid {
     padding: 3% 15%;
 }
 
+/* navbar */
 .navbar {
     margin-bottom: 4rem;
 }
@@ -24,8 +30,17 @@ h1 {
     font-weight: bold;
 }
 
+/* nav items  */
 .nav-item {
     padding: 0px 15px;
+}
+
+.nav-item:last-of-type {
+    padding-right: 0;
+}
+
+a.nav-link.active:last-of-type {
+    padding-right: 0;
 }
 
 .nav-link {
@@ -33,15 +48,47 @@ h1 {
     font-weight: light;
 }
 
-#title{
+/* header  */
+.download-button {
+    margin: 5% 2% 5% 0;
+}
+
+#title {
     background: #ff4c68;
 }
 
-#iphone {
-    transform: rotate(25deg);
-    width: 300px;
+/* header image  */
+.iphone-container {
+    text-align: center;
+}    
+
+.iphone {
+    width: 60%;
 }
 
-.download-but {
-    margin: 5% 2% 5% 0;
+#features {
+    /* to cover the title section we needed to assign positions to both sections and iphone image and use a white background to notice the overlap  */
+    /* since feature section and the image don't have a z-index (default is 0) but features section is further down the flow, it has priority over the image  */
+    background: white;
+    padding: 7% 15%;
+    position: relative;
+}
+
+#features p {
+    color: #8f8f8f;
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* header image  */
+    .iphone-container {
+        position: relative;
+        height: 500px;
+        width: 45%;
+    }
+    
+    .iphone {
+        transform: rotate(25deg) translateX(-28px);
+        position: absolute;  
+    }    
 }
