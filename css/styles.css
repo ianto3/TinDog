@@ -191,11 +191,13 @@ a.nav-link.active:last-of-type {
         width: 45%;
     }
     
+    /* rotate and move iphone image  */
     .iphone {
         position: absolute;  
         transform: rotate(25deg) translateX(-28px);
     }    
 
+    /* shrink icons to keep appropiate scale */
     .social-icon {
         width: 3%;
     }
