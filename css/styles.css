@@ -5,15 +5,26 @@ body {
 h1 {
     line-height: 1.5;
     font-family: "Montserrat-Black", sans-serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
     color: white;
 }
 
+h2 {
+    font-family: "Montserrat-Black", sans-serif;
+    font-size: 2.5rem;
+}
+
 h3 {
     font-family: "Montserrat-Bold", sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
+
+p, li {
+    color: #8f8f8f;
+    font-size: 1.2rem;
+}
+
 
 .container-fluid {
     padding: 3% 15%;
@@ -33,6 +44,11 @@ h3 {
 /* nav items  */
 .nav-item {
     padding: 0px 15px;
+}
+
+.nav-link:hover{
+    color: black;
+    text-shadow: white;
 }
 
 .nav-item:last-of-type {
@@ -66,6 +82,11 @@ a.nav-link.active:last-of-type {
     width: 60%;
 }
 
+.download-button {
+    margin: 5% 1.5%
+}
+
+/* features  */
 #features {
     /* to cover the title section we needed to assign positions to both sections and iphone image and use a white background to notice the overlap  */
     /* since feature section and the image don't have a z-index (default is 0) but features section is further down the flow, it has priority over the image  */
@@ -74,21 +95,108 @@ a.nav-link.active:last-of-type {
     position: relative;
 }
 
-#features p {
-    color: #8f8f8f;
+.icon {
+    color: #ef8172;
+    margin: 20px 0;
+}
+
+.icon:hover {
+    color: #ff4c68;
+}
+
+/* testimonials  */
+
+#testimonials {
+    background: #ef8172;
+    color: white;
+    text-align: center;  
+}
+
+.testimonial-pic {
+    border-radius: 50%;
+    margin: 20px;
+    width: 15%;
+}
+
+.carousel-item {
+    padding: 7% 15%;
+}
+
+/* press  */
+
+#press {
+    background: #ef8172;  
+    padding-bottom: 3%;
+}
+
+#press img {
+    margin: 0 30px;
+    width: 15%;
+}
+
+/* pricing  */
+
+#pricing {
+    padding: 7% 15%;
+    text-align: center;
+}
+
+.card {
+    margin: 10% 0;
+}
+
+.sub-features {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.card-title {
+    margin-top: 5%;
+}
+
+.sub-features li {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    margin: 5% 10%;
+    padding-bottom: 5%;
+}
+
+/* call to action  */
+
+#cta {
+    padding: 7% 15%;
+    background: #ff4c68;
+    color: white;
+    text-align: center;
+}
+
+/* footer  */
+
+#footer {
+    padding: 7% 15%;
+    text-align: center;
+}
+
+.social-icon {
+    color: black;
+    margin: 5% 2%;
+    width: 6%;
 }
 
 @media screen and (min-width: 1200px) {
 
     /* header image  */
     .iphone-container {
-        position: relative;
         height: 500px;
+        position: relative;
         width: 45%;
     }
     
     .iphone {
-        transform: rotate(25deg) translateX(-28px);
         position: absolute;  
+        transform: rotate(25deg) translateX(-28px);
     }    
+
+    .social-icon {
+        width: 3%;
+    }
 }
